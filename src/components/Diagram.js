@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import * as go from "gojs";
 import { ReactDiagram } from "gojs-react";
@@ -71,32 +71,15 @@ const initDiagram = (nodeDataArray, linkDataArray) => () => {
     console.log(ev.subject.ie); //Successfully logs the node's name.
   });
 
-  diagram.addDiagramListener("InitialLayoutCompleted", function (e) {
-    // select the Link in order to show its two additional Adornments, for shifting the ends
-    diagram.links.first().isSelected = true;
-  });
-
   return diagram;
 };
 // render function...
-export default function Diagram(props) {
-  const {
-    nodeDataArray = [
-      { key: 0, text: "Ts", loc: "0 0" },
-      { key: 1, text: "P", loc: "150 0" },
-      { key: 2, text: "G", loc: "0 150" },
-      { key: 3, text: "Fs", loc: "150 150" },
-    ],
-    linkDataArray = [
-      { from: "0", to: "1" },
-      { from: "1", to: "3" },
-      { from: "2", to: "1" },
-    ],
-  } = props;
-
+export default function Diagram({ nodeDataArray, linkDataArray }) {
   return (
     <ReactDiagram
       initDiagram={initDiagram(nodeDataArray, linkDataArray)}
+      nodeDataArray={nodeDataArray}
+      linkDataArray={linkDataArray}
       divClassName="diagram-component"
       onModelChange={console.log}
     />
