@@ -29,7 +29,7 @@ const initDiagram = (nodeDataArray, linkDataArray) => () => {
       go.Shape,
       "Circle",
       { name: "SHAPE", fill: "lightgray", strokeWidth: 2 },
-      new go.Binding("stroke", "green").ofModel()
+      new go.Binding("fill", "fill")
     ),
     $(
       go.TextBlock,
@@ -48,8 +48,8 @@ const initDiagram = (nodeDataArray, linkDataArray) => () => {
     new go.Binding("points").makeTwoWay(),
     $(
       go.Shape,
-      { strokeWidth: 3, fill: "blue" },
-      new go.Binding("stroke", "black").ofModel()
+      { strokeWidth: 3, fill: "red" },
+      new go.Binding("stroke", "stroke ").ofModel()
     )
   );
 
@@ -61,6 +61,7 @@ const initDiagram = (nodeDataArray, linkDataArray) => () => {
         position: new go.Point(0, 0),
         selectable: false,
         pickable: false,
+        opacity: 0.6
       },
       $(go.Picture, { source: `hata.png` })
     )
@@ -74,7 +75,11 @@ const initDiagram = (nodeDataArray, linkDataArray) => () => {
   return diagram;
 };
 // render function...
-export default function Diagram({ nodeDataArray, linkDataArray }) {
+export default function Diagram({ nodeDataArray, linkDataArray, selectedNode = null }) {
+  if(selectedNode >= 0 && nodeDataArray[selectedNode]) {
+    nodeDataArray[selectedNode].fill = 'green'
+  }
+
   return (
     <ReactDiagram
       initDiagram={initDiagram(nodeDataArray, linkDataArray)}

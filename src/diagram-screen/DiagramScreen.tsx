@@ -20,7 +20,10 @@ export default function App() {
   const [modalOpen, setModalOpen] = useState(false)
   const [processed, setProcessed] = useState(false)
   const classes = useStyles()
-
+  const search = window.location.search;
+  const params = new URLSearchParams(search);
+  const selectedNode = params.get("selectedNode");
+  if (+(selectedNode ?? 0) > 0) setTimeout(() => setProcessed(true), 0)
   const finishProcessing = useCallback(() => {
     setProcessed(true)
     setModalOpen(false)
@@ -36,7 +39,7 @@ export default function App() {
           <Menu reset={() => setConfirmReset(true)} start={() => setModalOpen(true)} />
         </Grid.Column>
         <Grid.Column>
-          <Diagram nodeDataArray={nodeDataArray} linkDataArray={linkDataArray} />
+          <Diagram nodeDataArray={nodeDataArray} linkDataArray={linkDataArray} selectedNode={selectedNode} />
         </Grid.Column>
 
       </Grid>
