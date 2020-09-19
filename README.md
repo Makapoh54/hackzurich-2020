@@ -35,9 +35,15 @@ Results were not quite satifying, so we decided to move into cloud - Google Cola
 
 But, here we encountered a problem of small dataset. Seemed like retina requires significantly larger dataset. We managed to train it, but the results were worse than for our locally trained YoLo version.
 
-The results of both YoLo and RetinaNet were unstable and inaccurate, so we switched to OpenCV and custom solution: 
+The results of both YoLo and RetinaNet were unstable and inaccurate, so we switched to OpenCV and custom solution.
 
-1) Using block adjacency graph potential components are segmented;
-2) Components are identified using contour based classification. Classification is done using support vector machine which is trained with HOG descriptors;
-3) Potential lines are detected using line segment detector algorithm;
-4) Components and lines are merged into common graph based on connecting coordinates.
+# Siemens automation circuit recognizer
+Special cirtuit recognizer, made for HackZurich 2020, Siemens "Graph the Building" challenge
+
+Honors go to @mahmut-aksakalli for his image recognition studies, which this recognizer is founded on.
+
+## How it works
+1) Using block adjacency graph potential components are segmented
+2) Components are identified using contour based classification. Classification is done using support vector machine which is trained with HOG descriptors
+3) Potential lines are detected using line segment detector algorithm
+4) Components and lines are merged into common graph based on connecting coordinates
