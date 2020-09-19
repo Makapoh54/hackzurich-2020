@@ -33,6 +33,8 @@ Results below:
 
 Results were not quite satisfying, so we decided to move into cloud - Google Colab, which provides GPU computing. We decided to change model from YoLo to RetinaNet, as its description stated it is more accurate, but a bit slower.
 
+![](https://github.com/Makapoh54/hackzurich-2020/blob/master/assets/googlecolab.JPG)
+
 However, we encountered a problem of small dataset. Seemed like retina requires significantly larger dataset. We managed to train it, but the results were worse than in our locally trained YoLo version.
 
 The results of trained models (both YoLo and RetinaNet) were unstable and inaccurate, so we switched to OpenCV patern recognition and custom solution.
