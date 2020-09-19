@@ -1,0 +1,25 @@
+<annotation>
+	<folder>my-project-name</folder>
+	<filename>PSen.png</filename>
+	<path>/my-project-name/PSen.png</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>189</width>
+		<height>175</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>psen</name>
+		<pose>Unspecified</pose>
+		<truncated>Unspecified</truncated>
+		<difficult>Unspecified</difficult>
+		<bndbox>
+			<xmin>0</xmin>
+			<ymin>1</ymin>
+			<xmax>189</xmax>
+			<ymax>175</ymax>
+		</bndbox>
+	</object>
+</annotation>

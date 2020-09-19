@@ -1,0 +1,48 @@
+{
+    "labels" : [
+        "cns",
+        "crossing",
+        "gen",
+        "hexg1",
+        "hexg2",
+        "hyds",
+        "junction",
+        "mxv1",
+        "mxv2",
+        "pipe",
+        "psen",
+        "pu",
+        "stk",
+        "tmon",
+        "tsen",
+        "vflmon",
+        "vflsen",
+        "vlv"
+    ],
+    "anchors" : [
+        [
+            101,
+            141,
+            148,
+            45,
+            414,
+            414
+        ],
+        [
+            40,
+            44,
+            57,
+            130,
+            58,
+            70
+        ],
+        [
+            16,
+            67,
+            30,
+            74,
+            37,
+            19
+        ]
+    ]
+}
