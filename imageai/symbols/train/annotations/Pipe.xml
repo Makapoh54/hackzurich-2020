@@ -1,0 +1,25 @@
+<annotation>
+	<folder>my-project-name</folder>
+	<filename>Pipe.png</filename>
+	<path>/my-project-name/Pipe.png</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>172</width>
+		<height>17</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>pipe</name>
+		<pose>Unspecified</pose>
+		<truncated>Unspecified</truncated>
+		<difficult>Unspecified</difficult>
+		<bndbox>
+			<xmin>0</xmin>
+			<ymin>0</ymin>
+			<xmax>172</xmax>
+			<ymax>17</ymax>
+		</bndbox>
+	</object>
+</annotation>
