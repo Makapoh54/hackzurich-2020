@@ -40,7 +40,7 @@ The results of both YoLo and RetinaNet were unstable and inaccurate, so we switc
 # Siemens automation circuit recognizer
 Special cirtuit recognizer, made for HackZurich 2020, Siemens "Graph the Building" challenge
 
-Honors go to @mahmut-aksakalli for his image recognition studies, which this recognizer is founded on.
+Honors go to @mahmut-aksakallli for his image recognition studies, which this recognizer is founded on.
 
 ## How it works
 1) Using block adjacency graph potential components are segmented
